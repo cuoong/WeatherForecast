@@ -10,7 +10,7 @@ WeatherForecast is an iOS application built on **MVP (Model View Presenter)** co
 Application support people search weather in whole city in the world in next 7 days.
 
 ## Feature
-- [x] [Search weather forcecast in 7 days](https://github.com/cuoong/WeatherForecast#weather-forcecast)
+- [x] [Search weather forcecast in 7 days](https://github.com/cuoong/WeatherForecast)
 
 ## Requirements
 
