@@ -160,14 +160,14 @@
 		5E6B6B5A24DA5EEC00EEABDF /* WeatherForecast */ = {
 			isa = PBXGroup;
 			children = (
-				5EAA3A9024DBADD0000BAE93 /* Utils */,
 				5E6B6B8B24DA616900EEABDF /* App */,
 				5E6B6B8C24DA617C00EEABDF /* Manager */,
-				5E6B6B8E24DA618C00EEABDF /* Model */,
+				5E6B6B8E24DA618C00EEABDF /* Models */,
+				5E6B6B8F24DA619200EEABDF /* Views */,
 				5E6B6B8D24DA618200EEABDF /* Presenter */,
 				5E6B6B9124DA621700EEABDF /* Storyboards */,
 				5E6B6B9024DA61EB00EEABDF /* Supporting Files */,
-				5E6B6B8F24DA619200EEABDF /* Views */,
+				5EAA3A9024DBADD0000BAE93 /* Utils */,
 			);
 			path = WeatherForecast;
 			sourceTree = "<group>";
@@ -220,7 +220,7 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		5E6B6B8E24DA618C00EEABDF /* Model */ = {
+		5E6B6B8E24DA618C00EEABDF /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				5E6B6B9224DA654F00EEABDF /* Coordinate.swift */,
@@ -230,7 +230,7 @@
 				5E6B6B9A24DA67FE00EEABDF /* Temperature.swift */,
 				5EAA3A8424DACB8A000BAE93 /* WeatherForcecast.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5E6B6B8F24DA619200EEABDF /* Views */ = {
