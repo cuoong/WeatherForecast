@@ -33,7 +33,7 @@ class WeatherForecastTableViewCell: UITableViewCell {
         configureFonts()
     }
     
-    private func configureFonts() {
+    func configureFonts() {
         dateLabel.adjustsFontForContentSizeCategory = true
         dateLabel.font = .preferredFont(forTextStyle: .footnote)
         
@@ -84,7 +84,7 @@ class WeatherForecastTableViewCell: UITableViewCell {
         let humidity = weatherItem.humidity
         humidityValueLabel.text = String(humidity) + "%"
         
-        let weather = weatherItem.weather.first?.description
-        descriptionValueLabel.text = weather
+        let weatherDescription = weatherItem.weather.first?.description
+        descriptionValueLabel.text = weatherDescription
     }
 }

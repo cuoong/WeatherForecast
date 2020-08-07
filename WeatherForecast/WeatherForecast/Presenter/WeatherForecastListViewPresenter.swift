@@ -10,10 +10,11 @@ import UIKit
 
 class WeatherForecastListViewPresenter: NSObject {
     
-    weak private var view: ListWeatherProtocol?
+    weak private var view: ListWeatherViewProtocol?
     private let cache: Cache<String, [WeatherItem]>
+    var apiManager = APIManager.shared
     
-    init(view: ListWeatherProtocol) {
+    init(view: ListWeatherViewProtocol) {
         self.view = view
         self.cache = Cache<String, [WeatherItem]>()
     }
@@ -30,7 +31,7 @@ class WeatherForecastListViewPresenter: NSObject {
         
         self.view?.startLoading()
         
-        APIManager.shared.fetchForeCastWeatherFromCity(city, successCallback: { [weak self] weatherItems in
+        apiManager.fetchForeCastWeatherFromCity(city, successCallback: { [weak self] weatherItems in
             guard let self = self else { return }
             self.view?.finishLoading()
             self.view?.refreshView(weatherItems)

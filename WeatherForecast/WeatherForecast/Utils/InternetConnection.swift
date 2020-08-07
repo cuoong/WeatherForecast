@@ -11,7 +11,7 @@ import Alamofire
 
 class InternetConnection {
     class func isConnectedToInternet() -> Bool {
-        guard let manager = NetworkReachabilityManager() else{
+        guard let manager = NetworkReachabilityManager() else {
             return false
         }
         return manager.isReachable

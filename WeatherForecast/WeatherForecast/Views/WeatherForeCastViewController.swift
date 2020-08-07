@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ListWeatherProtocol: class {
+protocol ListWeatherViewProtocol: class {
     func refreshView(_ listWeather: [WeatherItem]?)
     func startLoading()
     func finishLoading()
@@ -16,7 +16,7 @@ protocol ListWeatherProtocol: class {
     func showDownloadErrorAlert(error: Error)
 }
 
-class WeatherForeCastViewController: UIViewController, ListWeatherProtocol {
+class WeatherForeCastViewController: UIViewController, ListWeatherViewProtocol {
     @IBOutlet weak var tableView: UITableView!
     let searchBar = UISearchBar()
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -26,6 +26,7 @@ class WeatherForeCastViewController: UIViewController, ListWeatherProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter = WeatherForecastListViewPresenter(view: self)
         configTableView()
         configSearchBar()
         activityIndicator?.hidesWhenStopped = true
@@ -33,8 +34,6 @@ class WeatherForeCastViewController: UIViewController, ListWeatherProtocol {
     
     private func configTableView() {
         tableView.register(UINib(nibName: "WeatherForecastTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        self.presenter = WeatherForecastListViewPresenter(view: self)
-        
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 255
         self.tableView.delegate = self

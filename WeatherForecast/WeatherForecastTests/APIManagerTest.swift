@@ -43,7 +43,7 @@ class APIManagerTest: XCTestCase {
             }
         }
         
-        //wait for some time for the expectation (you can wait here more than 50 seconds, depending on the time for the response)
+        //wait for some time for the expectation
         waitForExpectations(timeout: 50, handler: { (error) in
             if let error = error {
                 print("Failed : \(error.localizedDescription)")

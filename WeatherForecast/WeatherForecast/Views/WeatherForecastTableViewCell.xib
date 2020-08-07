@@ -111,15 +111,15 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="avgTemperatureLabel" destination="NEq-G5-FuU" id="TH3-nu-ahL"/>
-                <outlet property="avgTemperatureValueLabel" destination="jsW-8h-mhp" id="rHm-ZY-9wf"/>
+                <outlet property="avgTemperatureValueLabel" destination="jrU-af-Vmu" id="Mu1-uo-8RC"/>
                 <outlet property="dateLabel" destination="sTw-dB-pw5" id="7Px-mu-iI5"/>
-                <outlet property="dateValueLabel" destination="jrU-af-Vmu" id="C8l-Yj-BOH"/>
+                <outlet property="dateValueLabel" destination="3wH-Jr-gng" id="PE0-6m-jcN"/>
                 <outlet property="descriptionLabel" destination="kTJ-oH-dM0" id="QLi-fv-dxg"/>
-                <outlet property="descriptionValueLabel" destination="3wH-Jr-gng" id="SsO-X8-DuN"/>
+                <outlet property="descriptionValueLabel" destination="qiB-5M-yhv" id="UvS-2p-TBM"/>
                 <outlet property="humidityLabel" destination="eea-Ar-rgu" id="qax-tM-oHb"/>
-                <outlet property="humidityValueLabel" destination="qiB-5M-yhv" id="7nJ-dG-TNK"/>
+                <outlet property="humidityValueLabel" destination="NdZ-3I-axs" id="XaP-Qc-9UE"/>
                 <outlet property="pressureLabel" destination="OP0-FH-Mpb" id="tMT-6s-wc7"/>
-                <outlet property="pressureValueLabel" destination="NdZ-3I-axs" id="iQ5-mN-xDC"/>
+                <outlet property="pressureValueLabel" destination="jsW-8h-mhp" id="js5-Za-9ZY"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="190.51339285714286"/>
         </tableViewCell>
