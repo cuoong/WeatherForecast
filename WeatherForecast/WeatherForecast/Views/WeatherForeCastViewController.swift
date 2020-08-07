@@ -88,13 +88,28 @@ class WeatherForeCastViewController: UIViewController, ListWeatherViewProtocol {
     
     func showReachabilityAlert() {
         activityIndicator?.stopAnimating()
-        
+        let alertController = UIAlertController(title: "No internet connection", message: "Please check your internet connection", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] (UIAlertAction) in
+            guard let self = self else { return }
+            self.openWifiSetting()
+        }))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func showDownloadErrorAlert(error: Error) {
         activityIndicator?.stopAnimating()
+        let alertController = UIAlertController(title: "", message: error.localizedDescription, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
     
+    private func openWifiSetting() {
+        if let url = URL(string:"App-Prefs:root=WIFI") {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
 }
 
 extension WeatherForeCastViewController: UITableViewDelegate {
