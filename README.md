@@ -9,6 +9,8 @@ WeatherForecast is an iOS application built on **MVP (Model View Presenter)** co
 
 Application support people search weather in whole city in the world in next 7 days.
 
+![](https://github.com/cuoong/WeatherForecast/blob/develop/WeatherForecast/WeatherForecast/Supporting%20Files/Assets.xcassets/Screen%20Recording%202020-08-09%20at%2022.06.26.gif?raw=true)
+
 ## Feature
 - [x] [Search weather forcecast in 7 days](https://github.com/cuoong/WeatherForecast)
 
@@ -26,12 +28,20 @@ Application support people search weather in whole city in the world in next 7 d
 - [x] Allow user to input the searching term.
 - [x] Able to proceed searching with a condition of the search term length more than 3 characters
 - [x] Render the searched results as a list of weather items.
-- [x] Support cache on RAM and preventing bunch of API request when user searh city
+- [x] Support cache and preventing bunch of API request when user searh city
 - [x] Manage caching mechanism & lifecycle.
 - [x] Handle failures for internet connection and request error
 - [x] Support the disability to scale large text
 - [x] Support the disability to read out the text
 - [x] Test Coverage: 60% code of the app
+
+## Run project
+
+- Navigate to project folder by `cd your-project-directory`
+- Run `pod install`
+- Open project workspace `WeatherForecast.xcworkspace`
+
+
 
 
 ## MVP Concept
