@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build:
+    macos:
+      xcode: 11.6
+    steps:
+    - checkout
+    - run:
+        command: pod install
+    - run:
+        command: fastlane scan
+    - store_test_results:
+        path: test_output
+    - store_artifacts:
+        path: test_output
+        destination: scan-output
+workflows:
+  version: 2
+  workflow:
+    jobs:
+    - build
